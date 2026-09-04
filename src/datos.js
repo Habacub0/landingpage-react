@@ -108,9 +108,9 @@ export const BENEFICIOS = [
 ];
 
 export const EQUIPO = [
-  { id: 1, inicial: 'M', nombre: 'María Xoc', rol: 'Fundadora y tostadora' },
-  { id: 2, inicial: 'D', nombre: 'Diego Ramos', rol: 'Relación con productores' },
-  { id: 3, inicial: 'L', nombre: 'Lucía Pérez', rol: 'Ventas y comunidad' },
+  { id: 1, inicial: 'M', nombre: 'María Xoc', rol: 'Técnica en redes' },
+  { id: 2, inicial: 'D', nombre: 'Diego Ramos', rol: 'Técnico en hardware' },
+  { id: 3, inicial: 'L', nombre: 'Lucía Pérez', rol: 'Técnica en software' },
 ];
 
 export const ENLACES = [

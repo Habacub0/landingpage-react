@@ -5,18 +5,18 @@ export default function Nosotros() {
     <div className="contenedor seccion nosotros">
       <h2>Nuestra historia</h2>
       <p className="seccion__intro">
-        Servicios Técnicos de Reparación es un proyecto familiar que nació en 2026 por la necesidad de reparar electrodomésticos y aparatos electrónicos en Sololá. 
-        Desde entonces, nos hemos dedicado a ofrecer un servicio de calidad, confiable y accesible para nuestra comunidad.
+        Servicios Técnicos AR es un proyecto familiar que nació en 2026 por la necesidad de brindar 
+        soporte informático a hogares y pequeñas oficinas en Sololá. Desde entonces, nos hemos dedicado a ofrecer servicios confiables y accesibles para nuestra comunidad.
       </p>
 
       <p>
-        Estamos comprometidos con la sostenibilidad y la economía circular, promoviendo la reparación en lugar de la sustitución. 
-        Creemos que cada aparato tiene una historia y merece una segunda oportunidad.
+        Ofrecemos mantenimiento preventivo de computadoras, instalación de sistemas operativos y 
+        programas, recuperación de archivos y configuración de redes domésticas y para pequeñas oficinas.
       </p>
 
       <p>
-        Estamos orgullosos de nuestro equipo de técnicos altamente capacitados, quienes comparten nuestra pasión 
-        por la reparación y la satisfacción del cliente.
+        Contamos con personal técnico en las áreas de redes, hardware y software, comprometido
+         con brindar una atención profesional y respetuosa a cada cliente.
       </p>
 
       <h2 style={{ marginTop: '3rem' }}>El equipo</h2>
