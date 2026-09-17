@@ -14,7 +14,7 @@ export default function Nosotros() {
     />
 
     <div className="contenedor seccion nosotros">
-      <h2>Nuestra historia</h2>
+      <h1>Nuestra historia</h1>
 
       <p className="seccion__intro">
         Servicios Técnicos AR es un proyecto familiar que nació en 2026 por la

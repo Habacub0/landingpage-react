@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function TarjetaProducto({ producto }) {
   return (
-    <Link to={`/productos/${producto.id}`} className="tarjeta">
+    <Link to={`/productos/${producto.slug}`} className="tarjeta">
       <span className="tarjeta__emoji" aria-hidden="true">
         {producto.emoji}
       </span>

@@ -2,34 +2,36 @@ import { useParams, Link } from 'react-router-dom';
 import { PRODUCTOS } from '../datos.js';
 
 export default function Detalle() {
-  // 1. Leemos el :id de la URL. SIEMPRE llega como texto.
-  const { id } = useParams();
+  // Leemos el slug incluido en la URL.
+  const { slug } = useParams();
 
-  // 2. Buscamos el producto.
-  const producto = PRODUCTOS.find(p => p.id === Number(id));
+  // Buscamos el servicio mediante su slug.
+  const producto = PRODUCTOS.find(
+    producto => producto.slug === slug
+  );
 
-  // 3. Si no existe, mostramos un mensaje.
+  // Si el servicio no existe, mostramos un mensaje.
   if (!producto) {
     return (
       <>
         <title>Servicio no encontrado · Servicios Técnicos AR</title>
 
         <div className="contenedor seccion vacio">
-          <h2>Servicio no encontrado</h2>
+          <h1>Servicio no encontrado</h1>
 
           <p>
-            El servicio con el código {id} no está en nuestro catálogo.
+            El servicio solicitado no está en nuestro catálogo.
           </p>
 
           <Link className="boton" to="/productos">
-            Ver el catálogo
+            Ver el catálogo de servicios
           </Link>
         </div>
       </>
     );
   }
 
-  // 4. Si existe, mostramos el servicio y sus metadatos.
+  // Si existe, mostramos el servicio y sus metadatos.
   return (
     <>
       <title>{producto.nombre} · Servicios Técnicos AR</title>
@@ -41,12 +43,12 @@ export default function Detalle() {
 
       <link
         rel="canonical"
-        href={`https://serviciostecnicosar.netlify.app/productos/${producto.id}`}
+        href={`https://serviciostecnicosar.netlify.app/productos/${producto.slug}`}
       />
 
       <div className="contenedor seccion">
         <Link className="volver" to="/productos">
-          ← Volver al catálogo
+          ← Volver al catálogo de servicios
         </Link>
 
         <div className="detalle">
@@ -68,7 +70,7 @@ export default function Detalle() {
 
             {producto.notas.length > 0 && (
               <>
-                <h3>Características</h3>
+                <h2>Características</h2>
 
                 <ul className="notas">
                   {producto.notas.map(nota => (
@@ -83,7 +85,7 @@ export default function Detalle() {
             </p>
 
             <Link className="boton" to="/contacto">
-              Pedir este servicio
+              Solicitar este servicio técnico
             </Link>
           </div>
         </div>

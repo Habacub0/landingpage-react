@@ -28,7 +28,7 @@ export default function Inicio() {
 
       {/* ---------- Beneficios ---------- */}
       <section className="contenedor seccion">
-        <h2>Beneficios</h2>
+        <h1>Beneficios</h1>
         <p className="seccion__intro">
           Nos destacamos por la calidad de nuestro trabajo y la atención a los detalles. Cada servicio se realiza con profesionalismo, respeto y experiencia.
         </p>

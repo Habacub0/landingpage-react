@@ -152,7 +152,7 @@ export default function Contacto() {
       <MetadatosContacto />
 
       <div className="contenedor seccion">
-        <h2>Hablemos</h2>
+        <h1>Contacto y Cotizaciones</h1>
 
         <p className="seccion__intro">
           ¿Con que podemos ayudarte? Escríbenos.

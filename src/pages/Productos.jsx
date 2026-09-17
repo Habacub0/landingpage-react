@@ -27,7 +27,7 @@ export default function Productos() {
       />
 
       <div className="contenedor seccion">
-        <h2>Nuestro catálogo</h2>
+        <h1>Nuestro catálogo</h1>
 
         <p className="seccion__intro">
           {visibles.length} producto

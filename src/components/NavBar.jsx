@@ -5,7 +5,7 @@ export default function NavBar() {
   return (
     <nav className="navbar">
       <NavLink to="/" className="navbar__marca">
-        💻 Servicios Técnicos AR
+        <span aria-hidden="true">💻</span> Servicios Técnicos AR
       </NavLink>
 
       <ul className="navbar__links">

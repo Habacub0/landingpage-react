@@ -1,6 +1,7 @@
 export const PRODUCTOS = [
   {
     id: 1,
+    slug: 'instalacion-limpia-windows-11',
     nombre: 'Instalación limpia de Windows 11',
     categoria: 'Software',
     precio: 'Q1700.00',
@@ -14,6 +15,7 @@ export const PRODUCTOS = [
   },
   {
     id: 2,
+    slug: 'instalacion-programas',
     nombre: 'Instalación de programas',
     categoria: 'Software',
     precio: 'Solicitar cotización',
@@ -27,6 +29,7 @@ export const PRODUCTOS = [
   },
   {
     id: 3,
+    slug: 'recuperacion-archivos-borrados',
     nombre: 'Recuperación de archivos borrados',
     categoria: 'Software',
     precio: 'Solicitar cotización',
@@ -40,6 +43,7 @@ export const PRODUCTOS = [
   },
   {
     id: 4,
+    slug: 'mantenimiento-preventivo-computadoras',
     nombre: 'Mantenimiento preventivo de computadoras',
     categoria: 'Hardware',
     precio: 'Solicitar cotización',
@@ -53,6 +57,7 @@ export const PRODUCTOS = [
   },
   {
     id: 5,
+    slug: 'instalacion-redes-domesticas',
     nombre: 'Instalación de redes domésticas',
     categoria: 'Redes',
     precio: 'Solicitar cotización',
@@ -66,6 +71,7 @@ export const PRODUCTOS = [
   },
   {
     id: 6,
+    slug: 'instalacion-redes-oficinas-pequenas',
     nombre: 'Instalación de redes para oficinas pequeñas',
     categoria: 'Redes',
     precio: 'Solicitar cotización',
