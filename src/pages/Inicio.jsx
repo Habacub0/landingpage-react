@@ -8,6 +8,14 @@ export default function Inicio() {
 
   return (
     <>
+    <title>Soporte técnico para hogares y oficinas · AR Sololá</title>
+  <meta
+  name="description"
+  content="Servicios de mantenimiento, software y redes para computadoras de hogares y pequeñas oficinas en Sololá, con atención profesional y respetuosa."
+  />
+  <link
+  rel="canonical"
+  href="https://serviciostecnicosar.netlify.app/"/>
       {/* ---------- Portada ---------- */}
       <header className="hero">
         <span className="hero__etiqueta">Profesionalismo</span>
