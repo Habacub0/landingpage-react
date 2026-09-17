@@ -30,7 +30,23 @@ export default function Detalle() {
       </>
     );
   }
+  const precioNumerico = producto.precio.match(/[\d.]+/)?.[0];
 
+const datosEstructurados = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: producto.nombre,
+  description: producto.descripcion,
+  category: producto.categoria,
+  ...(precioNumerico && {
+    offers: {
+      '@type': 'Offer',
+      price: precioNumerico,
+      priceCurrency: 'GTQ',
+      availability: 'https://schema.org/InStock',
+    },
+  }),
+};
   // Si existe, mostramos el servicio y sus metadatos.
   return (
     <>
@@ -45,7 +61,12 @@ export default function Detalle() {
         rel="canonical"
         href={`https://serviciostecnicosar.netlify.app/productos/${producto.slug}`}
       />
-
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(datosEstructurados),
+  }}
+/>
       <div className="contenedor seccion">
         <Link className="volver" to="/productos">
           ← Volver al catálogo de servicios
