@@ -88,6 +88,12 @@ export default function Formulario() {
 
     setEnviando(false);
     setEnviado(true);
+
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'solicitud_cotizacion', {
+        modo: 'simulado',
+      });
+    }
   }
 
   function nuevoMensaje() {
