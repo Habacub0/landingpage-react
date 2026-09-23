@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
-import { PRODUCTOS, BENEFICIOS } from '../datos.js';
+import { PRODUCTOS, BENEFICIOS, EQUIPO } from '../datos.js';
 import TarjetaProducto from '../components/TarjetaProducto.jsx';
+import Hero from '../components/Hero.jsx';
+import SeccionAPI from '../components/SeccionApi.jsx';
 
 export default function Inicio() {
   // Estado derivado: filtramos los destacados en el momento
@@ -17,17 +19,10 @@ export default function Inicio() {
   rel="canonical"
   href="https://serviciostecnicosar.netlify.app/"/>
       {/* ---------- Portada ---------- */}
-      <header className="hero">
-        <span className="hero__etiqueta">Profesionalismo</span>
-        <h1>Soporte técnico especializado</h1>
-        <p>
-          Brindamos soporte técnico para computadoras, instalación de programas y configuración de redes, con profesionalismo y respeto.
-        </p>
-        <Link className="boton" to="/productos">Ver servicios</Link>
-      </header>
+      <Hero />
 
       {/* ---------- Beneficios ---------- */}
-      <section className="contenedor seccion">
+      <section className="contenedor seccion"id = "beneficios">
         <h2>Beneficios</h2>
         <p className="seccion__intro">
           Nos destacamos por la calidad de nuestro trabajo y la atención a los detalles. Cada servicio se realiza con profesionalismo, respeto y experiencia.
@@ -45,7 +40,7 @@ export default function Inicio() {
       </section>
 
       {/* ---------- Destacados ---------- */}
-      <section className="contenedor seccion">
+      <section className="contenedor seccion" id = "servicios">
         <h2>Nuestros favoritos</h2>
         <p className="seccion__intro">Los dos que más nos piden.</p>
 
@@ -60,6 +55,33 @@ export default function Inicio() {
             Ver todo el catálogo
           </Link>
         </p>
+      </section>
+      {/* ---------- Llamada a la acción final ---------- */}
+      <SeccionAPI />
+      {/* ---------- Confianza ---------- */}
+      <section className="contenedor seccion" id="cotizacion">
+        <h2>Nuestro equipo</h2>
+        <p className="seccion__intro">
+          Conoce a quienes están detrás de nuestros servicios.
+        </p>
+
+        <div className="rejilla">
+          {EQUIPO.map(persona => (
+            <article className="beneficio" key={persona.id}>
+              <h3>{persona.nombre}</h3>
+              <p>{persona.rol}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section className="contenedor seccion">
+        <h2>Solicita una cotización de soporte técnico</h2>
+        <p className="seccion__intro">
+          Cuéntanos qué necesitas para tu computadora, programas o red.
+        </p>
+        <Link className="boton" to="/contacto">
+          Solicitar tu cotización
+        </Link>
       </section>
     </>
   );

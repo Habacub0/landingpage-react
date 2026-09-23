@@ -641,3 +641,86 @@ h3 {
   font-weight: 800;
   text-shadow: 0 0 7px rgba(0, 245, 255, 0.65);
 }
+section[id] {
+  scroll-margin-top: 100px;
+}
+/* Mantener el espacio lateral de las secciones */
+.contenedor.seccion {
+  padding-inline: 1.25rem;
+}
+
+/* Foco visible al navegar con el teclado */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--marca);
+  outline-offset: 4px;
+}
+
+/* Adaptación a pantallas pequeñas */
+@media (max-width: 700px) {
+  .navbar {
+    position: static;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar__marca {
+    text-align: center;
+    font-size: 1.05rem;
+  }
+
+  .navbar__links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.25rem 0.75rem;
+  }
+
+  .navbar__links a {
+    display: block;
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  .hero {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .seccion h2 {
+    font-size: 1.5rem;
+  }
+
+  section[id] {
+    scroll-margin-top: 1rem;
+  }
+}
+.estado-peticion {
+  padding: 2rem 1rem;
+  text-align: center;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+}
+
+.spinner {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 4px solid var(--texto-suave);
+  border-top-color: var(--marca);
+  border-radius: 50%;
+  animation: girar 0.8s linear infinite;
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation: none;
+  }
+}
